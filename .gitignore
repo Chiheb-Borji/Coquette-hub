@@ -1,0 +1,29 @@
+.env
+.env.*
+*.log
+*.bak
+*.dump
+
+# Never commit database dumps containing data
+database/*.dump
+
+# Credentials
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# Dependencies / runtime
+vendor/
+node_modules/
+cache/
+logs/
+uploads/
+backups/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,4781 @@
+:root {
+    --coquette-primary: #DA1C5C;
+    --coquette-bg: #F7F8FA;
+    --coquette-card: #FFFFFF;
+    --coquette-text: #18181B;
+    --coquette-muted: #71717A;
+    --coquette-border: #E4E4E7;
+    --coquette-success: #16A34A;
+    --coquette-warning: #F59E0B;
+    --coquette-danger: #DC2626;
+}
+
+body.coquette-hub-ui {
+    background: var(--coquette-bg);
+}
+
+.coquette-dashboard {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.coquette-dashboard-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.coquette-dashboard-header h1 {
+    margin: 4px 0 6px;
+    color: var(--coquette-text);
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.coquette-dashboard-header p {
+    margin: 0;
+    color: var(--coquette-muted);
+    font-size: 14px;
+}
+
+.coquette-eyebrow {
+    color: var(--coquette-primary);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.coquette-user-role {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 7px 13px;
+    border: 1px solid #F3B7CB;
+    border-radius: 999px;
+    background: #FFF5F8;
+    color: var(--coquette-primary);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.coquette-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.coquette-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-height: 116px;
+    padding: 20px;
+    border: 1px solid var(--coquette-border);
+    border-radius: 14px;
+    background: var(--coquette-card);
+    color: var(--coquette-text);
+    text-decoration: none !important;
+    transition: 0.18s ease;
+}
+
+.coquette-stat-card:hover {
+    border-color: #D4D4D8;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
+    transform: translateY(-1px);
+}
+
+.coquette-stat-card span {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--coquette-muted);
+    font-size: 13px;
+}
+
+.coquette-stat-card strong {
+    color: var(--coquette-text);
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.coquette-stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 11px;
+    background: #FFF1F5;
+    color: var(--coquette-primary);
+    font-size: 18px;
+}
+
+.coquette-section,
+.coquette-panel {
+    border: 1px solid var(--coquette-border);
+    border-radius: 14px;
+    background: var(--coquette-card);
+}
+
+.coquette-section {
+    padding: 22px;
+    margin-bottom: 20px;
+}
+
+.coquette-section-heading,
+.coquette-panel-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.coquette-section-heading {
+    margin-bottom: 18px;
+}
+
+.coquette-section-heading h2,
+.coquette-panel-header h3 {
+    margin: 0 0 4px;
+    color: var(--coquette-text);
+    font-weight: 700;
+}
+
+.coquette-section-heading h2 {
+    font-size: 18px;
+}
+
+.coquette-panel-header h3 {
+    font-size: 16px;
+}
+
+.coquette-section-heading p,
+.coquette-panel-header p {
+    margin: 0;
+    color: var(--coquette-muted);
+    font-size: 12px;
+}
+
+.coquette-section-heading a,
+.coquette-panel-header a {
+    color: var(--coquette-primary);
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.coquette-kanban-summary {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.coquette-kanban-column {
+    padding: 16px;
+    border: 1px solid var(--coquette-border);
+    border-radius: 10px;
+    background: #FAFAFA;
+}
+
+.coquette-kanban-column strong {
+    display: block;
+    margin-top: 8px;
+    color: var(--coquette-text);
+    font-size: 22px;
+}
+
+.coquette-kanban-label {
+    color: var(--coquette-muted);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.coquette-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.coquette-panel {
+    min-height: 310px;
+    padding: 20px;
+}
+
+.coquette-panel-header {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #F0F0F2;
+}
+
+.coquette-empty {
+    display: flex;
+    min-height: 210px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--coquette-muted);
+    text-align: center;
+}
+
+.coquette-empty i {
+    margin-bottom: 12px;
+    color: #D4D4D8;
+    font-size: 30px;
+}
+
+.coquette-empty strong {
+    margin-bottom: 5px;
+    color: var(--coquette-text);
+}
+
+.coquette-empty span {
+    font-size: 12px;
+}
+
+.coquette-list {
+    padding-top: 8px;
+}
+
+.coquette-list-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 13px 4px;
+    border-bottom: 1px solid #F4F4F5;
+    color: var(--coquette-text);
+    text-decoration: none !important;
+}
+
+.coquette-list-row:last-child {
+    border-bottom: 0;
+}
+
+.coquette-list-row strong {
+    display: block;
+    margin-bottom: 3px;
+    color: var(--coquette-text);
+    font-size: 13px;
+}
+
+.coquette-list-row span {
+    color: var(--coquette-muted);
+    font-size: 11px;
+}
+
+.coquette-list-row > i {
+    color: #A1A1AA;
+    font-size: 11px;
+}
+
+.coquette-analytics-content {
+    display: flex;
+    min-height: 220px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 14px;
+}
+
+.coquette-analytics-content strong,
+.coquette-analytics-content span {
+    display: block;
+}
+
+.coquette-analytics-content strong {
+    margin-bottom: 4px;
+    color: var(--coquette-text);
+    font-size: 16px;
+}
+
+.coquette-analytics-content span {
+    max-width: 460px;
+    color: var(--coquette-muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.coquette-analytics-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 11px;
+    background: #FFF1F5;
+    color: var(--coquette-primary);
+    font-size: 19px;
+}
+
+.coquette-dashboard .btn-primary {
+    border-color: var(--coquette-primary) !important;
+    background: var(--coquette-primary) !important;
+}
+
+@media (max-width: 1100px) {
+    .coquette-stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .coquette-dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .coquette-dashboard-header {
+        flex-direction: column;
+    }
+
+    .coquette-stats-grid,
+    .coquette-kanban-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .coquette-dashboard-header h1 {
+        font-size: 24px;
+    }
+}
+
+
+/* =========================================================
+   COQUETTE HUB v0.3 — GLOBAL UX
+   ========================================================= */
+
+body.coquette-hub-ui {
+    background: #F7F8FA !important;
+}
+
+
+/* ---------- HEADER ---------- */
+
+#header {
+    background: #FFFFFF !important;
+    border-bottom: 1px solid #ECECF0 !important;
+    box-shadow: 0 1px 3px rgba(24,24,27,.04) !important;
+}
+
+#header #logo {
+    display: flex !important;
+    align-items: center !important;
+    min-width: 190px;
+}
+
+#header #logo img {
+    max-height: 35px !important;
+    width: auto !important;
+    object-fit: contain !important;
+}
+
+#header #logo .logo-text {
+    font-size: 0 !important;
+}
+
+
+/* ---------- SIDEBAR ---------- */
+
+#menu.sidebar {
+    background: #FFFFFF !important;
+    border-right: 1px solid #E8E8EC !important;
+}
+
+#side-menu > li > a {
+    margin: 3px 8px;
+    border-radius: 9px;
+    color: #3F3F46 !important;
+    font-weight: 600;
+    transition: .15s ease;
+}
+
+#side-menu > li > a:hover {
+    background: #F7F7F8 !important;
+    color: #18181B !important;
+}
+
+#side-menu > li.active > a,
+#side-menu > li > a.active {
+    background: #FFF1F5 !important;
+    color: #DA1C5C !important;
+}
+
+#side-menu .menu-icon {
+    width: 20px;
+    color: #71717A;
+}
+
+#side-menu > li.active > a .menu-icon {
+    color: #DA1C5C !important;
+}
+
+
+/* ---------- GROUPS ---------- */
+
+.menu-item-hub-crm > a,
+.menu-item-hub-work > a,
+.menu-item-hub-analytics > a,
+.menu-item-hub-system > a {
+    margin-top: 12px !important;
+    font-size: 12px;
+    font-weight: 800 !important;
+    letter-spacing: .04em;
+}
+
+#side-menu .nav-second-level {
+    padding: 3px 8px 6px 12px;
+}
+
+#side-menu .nav-second-level > li > a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 2px 0;
+    padding: 9px 12px !important;
+    border-radius: 8px;
+    color: #52525B !important;
+    font-size: 13px;
+}
+
+#side-menu .nav-second-level > li > a:hover {
+    background: #F7F7F8 !important;
+    color: #18181B !important;
+}
+
+#side-menu .nav-second-level > li.active > a {
+    background: #FFF1F5 !important;
+    color: #DA1C5C !important;
+}
+
+
+/* ---------- PROFILE ---------- */
+
+.sidebar-user-profile > a {
+    border-color: #ECECF0 !important;
+    box-shadow: none !important;
+}
+
+
+/* ---------- HIDE LEGACY SETUP ---------- */
+
+#setup-menu-item,
+#setup-menu-wrapper {
+    display: none !important;
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+.btn-primary,
+button.btn-primary,
+a.btn-primary {
+    background: #DA1C5C !important;
+    border-color: #DA1C5C !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: #C51651 !important;
+    border-color: #C51651 !important;
+}
+
+
+/* ---------- LINKS ---------- */
+
+.coquette-dashboard a:not(.btn) {
+    text-decoration: none;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 767px) {
+
+    #header {
+        min-height: 57px;
+    }
+
+    #header #logo {
+        display: flex !important;
+        min-width: 0 !important;
+        max-width: 155px;
+    }
+
+    #header #logo img {
+        max-height: 27px !important;
+        max-width: 145px !important;
+    }
+
+    #top_search {
+        display: none !important;
+    }
+
+    #menu.sidebar {
+        box-shadow: 8px 0 25px rgba(0,0,0,.08);
+    }
+
+    .coquette-dashboard {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+
+    .coquette-stat-card {
+        min-height: 90px;
+    }
+
+    .coquette-panel {
+        min-height: auto;
+    }
+
+    .coquette-dashboard-header h1 {
+        font-size: 23px;
+    }
+}
+
+
+/* =========================================================
+   COQUETTE HUB — OFFICIAL BRAND
+   ========================================================= */
+
+.coquette-hub-header-logo {
+    display: block !important;
+    width: auto !important;
+    max-width: 175px !important;
+    height: 34px !important;
+    object-fit: contain !important;
+}
+
+
+/* Sidebar logo */
+
+.coquette-hub-sidebar-brand {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    height: 72px;
+
+    margin: 0 14px 8px;
+
+    text-decoration: none !important;
+
+    border-bottom: 1px solid #ECECF0;
+}
+
+.coquette-hub-sidebar-brand img {
+    display: block;
+
+    max-width: 190px;
+    max-height: 48px;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* Perfex had 80px reserved above profile.
+   The HUB brand now occupies this space. */
+
+#menu.sidebar .sidebar-user-profile {
+    margin-top: 10px !important;
+}
+
+
+/* Hide duplicate Settings even before JS executes */
+
+#setup-menu-item {
+    display: none !important;
+}
+
+
+@media (max-width: 767px) {
+
+    .coquette-hub-sidebar-brand {
+        height: 64px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .coquette-hub-sidebar-brand img {
+        max-width: 170px;
+        max-height: 42px;
+    }
+
+    .coquette-hub-header-logo {
+        max-width: 135px !important;
+        height: 27px !important;
+    }
+}
+
+
+/* =========================================================
+   COQUETTE HUB BRAND FULL LOGO + TITLE
+   ========================================================= */
+
+#header #logo a.logo {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    text-decoration: none !important;
+    white-space: nowrap;
+}
+
+#header .coquette-hub-header-logo {
+    width: 45px !important;
+    height: 45px !important;
+    max-width: 45px !important;
+    max-height: 45px !important;
+    object-fit: contain !important;
+    flex: 0 0 45px;
+}
+
+.coquette-hub-brand-title {
+    display: inline-block;
+    color: #18181B;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: .045em;
+    line-height: 1;
+}
+
+.coquette-hub-sidebar-brand {
+    gap: 9px !important;
+}
+
+.coquette-hub-sidebar-brand img {
+    width: 48px !important;
+    height: 48px !important;
+    max-width: 48px !important;
+    max-height: 48px !important;
+    object-fit: contain;
+}
+
+.coquette-hub-sidebar-title {
+    color: #18181B;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .035em;
+    white-space: nowrap;
+}
+
+
+@media (max-width: 767px) {
+
+    #header .coquette-hub-header-logo {
+        width: 35px !important;
+        height: 35px !important;
+        max-width: 35px !important;
+        max-height: 35px !important;
+    }
+
+    .coquette-hub-brand-title {
+        font-size: 11px;
+    }
+
+    .coquette-hub-sidebar-title {
+        font-size: 12px;
+    }
+}
+
+
+/* ============================================================
+   COQUETTE_HUB_STATISTICS_NATIVE_V1
+   ============================================================ */
+
+.cqstats-page{
+    max-width:1600px;
+    margin:0 auto;
+    padding-top:4px;
+}
+
+.cqstats-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:24px;
+    margin-bottom:20px;
+}
+
+.cqstats-eyebrow,
+.cqstats-section-label{
+    display:block;
+    margin-bottom:6px;
+    color:#DA1C5C;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:.13em;
+}
+
+.cqstats-header h1,
+.cqstats-section-title h2{
+    margin:0;
+    color:#18181B;
+    font-weight:800;
+    letter-spacing:-.035em;
+}
+
+.cqstats-header h1{
+    font-size:30px;
+}
+
+.cqstats-header p,
+.cqstats-section-title p{
+    margin:7px 0 0;
+    color:#71717A;
+    font-size:13px;
+}
+
+.cqstats-sync-pill{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:9px 12px;
+    background:#fff;
+    border:1px solid #E4E4E7;
+    border-radius:10px;
+    color:#52525B;
+    font-size:11px;
+    font-weight:700;
+}
+
+.cqstats-sync-pill span{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#22C55E;
+    box-shadow:0 0 0 4px rgba(34,197,94,.09);
+}
+
+.cqstats-tabs{
+    display:flex;
+    gap:4px;
+    padding:5px;
+    margin-bottom:18px;
+    overflow-x:auto;
+    background:#fff;
+    border:1px solid #E4E4E7;
+    border-radius:13px;
+}
+
+.cqstats-tabs a{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    flex:0 0 auto;
+    padding:9px 13px;
+    color:#71717A;
+    border-radius:9px;
+    font-size:11px;
+    font-weight:700;
+    text-decoration:none!important;
+    transition:.16s ease;
+}
+
+.cqstats-tabs a:hover{
+    color:#18181B;
+    background:#FAFAFA;
+}
+
+.cqstats-tabs a.active{
+    color:#DA1C5C;
+    background:#FDECF2;
+}
+
+.cqstats-filters,
+.cqstats-product-filters{
+    display:flex;
+    align-items:flex-end;
+    gap:9px;
+    flex-wrap:wrap;
+    padding:12px;
+    margin-bottom:18px;
+    background:#fff;
+    border:1px solid #E4E4E7;
+    border-radius:13px;
+}
+
+.cqstats-filters label{
+    display:block;
+    margin-bottom:5px;
+    color:#71717A;
+    font-size:9px;
+    font-weight:700;
+}
+
+.cqstats-filters select,
+.cqstats-product-filters select,
+.cqstats-product-filters input{
+    height:36px;
+    padding:0 11px;
+    background:#fff;
+    border:1px solid #E4E4E7;
+    border-radius:9px;
+    outline:none;
+    color:#3F3F46;
+    font-size:11px;
+}
+
+.cqstats-kpi-grid{
+    display:grid;
+    grid-template-columns:repeat(6,minmax(0,1fr));
+    gap:11px;
+    margin-bottom:18px;
+}
+
+.cqstats-kpi-grid-4{
+    grid-template-columns:repeat(4,minmax(0,1fr));
+}
+
+.cqstats-kpi{
+    min-width:0;
+    padding:16px;
+    background:
+        linear-gradient(
+            145deg,
+            #fff 0%,
+            #fff 72%,
+            #FFF8FB 100%
+        );
+    border:1px solid #E7E7EB;
+    border-radius:15px;
+    box-shadow:
+        0 1px 2px rgba(24,24,27,.025),
+        0 8px 25px rgba(24,24,27,.025);
+}
+
+.cqstats-kpi span{
+    display:block;
+    color:#71717A;
+    font-size:10px;
+    font-weight:700;
+}
+
+.cqstats-kpi strong{
+    display:block;
+    margin-top:11px;
+    overflow:hidden;
+    color:#18181B;
+    font-size:22px;
+    font-weight:800;
+    letter-spacing:-.03em;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.cqstats-kpi strong em{
+    color:#71717A;
+    font-size:9px;
+    font-style:normal;
+    font-weight:700;
+}
+
+.cqstats-kpi small{
+    display:block;
+    margin-top:5px;
+    color:#A1A1AA;
+    font-size:9px;
+}
+
+.cqstats-kpi-alert{
+    border-color:rgba(218,28,92,.18);
+}
+
+.cqstats-kpi-alert strong{
+    color:#DA1C5C;
+}
+
+.cqstats-two-columns{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    margin-bottom:14px;
+}
+
+.cqstats-panel{
+    padding:17px;
+    background:#fff;
+    border:1px solid #E7E7EB;
+    border-radius:16px;
+    box-shadow:
+        0 1px 2px rgba(24,24,27,.02),
+        0 8px 24px rgba(24,24,27,.02);
+}
+
+.cqstats-panel-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:15px;
+}
+
+.cqstats-panel-head h2{
+    margin:0;
+    color:#18181B;
+    font-size:16px;
+    font-weight:800;
+    letter-spacing:-.025em;
+}
+
+.cqstats-panel-head a{
+    color:#DA1C5C;
+    font-size:10px;
+    font-weight:700;
+    text-decoration:none!important;
+}
+
+.cqstats-sales-bars{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.cqstats-bar-row{
+    display:grid;
+    grid-template-columns:42px 1fr 90px;
+    align-items:center;
+    gap:9px;
+}
+
+.cqstats-bar-row>span{
+    color:#A1A1AA;
+    font-size:9px;
+    font-weight:700;
+}
+
+.cqstats-bar-row>div{
+    height:7px;
+    overflow:hidden;
+    background:#F3F4F6;
+    border-radius:99px;
+}
+
+.cqstats-bar-row>div i{
+    display:block;
+    height:100%;
+    min-width:2px;
+    background:
+        linear-gradient(
+            90deg,
+            #DA1C5C,
+            #EF7AA1
+        );
+    border-radius:99px;
+}
+
+.cqstats-bar-row strong{
+    overflow:hidden;
+    color:#3F3F46;
+    font-size:9px;
+    font-weight:700;
+    text-align:right;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.cqstats-stock-layout{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:32px;
+    min-height:210px;
+}
+
+.cqstats-donut{
+    width:132px;
+    height:132px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex:0 0 auto;
+    border-radius:50%;
+    background:
+        conic-gradient(
+            #DA1C5C 0 calc(var(--cq-out) * 3.6),
+            #22C55E calc(var(--cq-out) * 3.6) 360deg
+        );
+    position:relative;
+}
+
+.cqstats-donut:after{
+    content:"";
+    position:absolute;
+    inset:16px;
+    background:#fff;
+    border-radius:50%;
+}
+
+.cqstats-donut>div{
+    position:relative;
+    z-index:2;
+    text-align:center;
+}
+
+.cqstats-donut strong{
+    display:block;
+    color:#18181B;
+    font-size:20px;
+    font-weight:800;
+}
+
+.cqstats-donut span{
+    color:#A1A1AA;
+    font-size:9px;
+}
+
+.cqstats-stock-numbers{
+    min-width:170px;
+}
+
+.cqstats-stock-numbers>div{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    padding:10px 0;
+    border-bottom:1px solid #F1F1F3;
+}
+
+.cqstats-stock-numbers span{
+    color:#71717A;
+    font-size:10px;
+}
+
+.cqstats-stock-numbers strong{
+    color:#18181B;
+    font-size:12px;
+}
+
+.cqstats-ranking{
+    display:flex;
+    flex-direction:column;
+}
+
+.cqstats-rank-row{
+    display:grid;
+    grid-template-columns:28px 1fr auto;
+    align-items:center;
+    gap:10px;
+    padding:10px 0;
+    border-bottom:1px solid #F3F4F6;
+}
+
+.cqstats-rank-row:last-child{
+    border-bottom:0;
+}
+
+.cqstats-rank-number{
+    width:25px;
+    height:25px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#FDECF2;
+    color:#DA1C5C;
+    border-radius:7px;
+    font-size:9px;
+    font-weight:800;
+}
+
+.cqstats-rank-row>div{
+    min-width:0;
+}
+
+.cqstats-rank-row>div strong{
+    display:block;
+    overflow:hidden;
+    color:#3F3F46;
+    font-size:10px;
+    font-weight:750;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.cqstats-rank-row>div small{
+    display:block;
+    margin-top:3px;
+    color:#A1A1AA;
+    font-size:8px;
+}
+
+.cqstats-rank-row>b{
+    color:#18181B;
+    font-size:9px;
+    white-space:nowrap;
+}
+
+.cqstats-sync-list>div{
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    padding:11px 0;
+    border-bottom:1px solid #F3F4F6;
+}
+
+.cqstats-sync-list span{
+    color:#71717A;
+    font-size:10px;
+}
+
+.cqstats-sync-list strong{
+    color:#3F3F46;
+    font-size:9px;
+}
+
+.cqstats-notice{
+    margin-top:13px;
+    padding:10px 11px;
+    background:#FFF8FB;
+    color:#A11B4B;
+    border:1px solid rgba(218,28,92,.09);
+    border-radius:9px;
+    font-size:9px;
+    line-height:1.5;
+}
+
+.cqstats-section-title{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:18px;
+    margin:6px 0 17px;
+}
+
+.cqstats-section-title h2{
+    font-size:22px;
+}
+
+.cqstats-result-count{
+    padding:8px 11px;
+    background:#fff;
+    color:#52525B;
+    border:1px solid #E4E4E7;
+    border-radius:9px;
+    font-size:10px;
+    font-weight:700;
+}
+
+.cqstats-result-count.danger{
+    color:#DA1C5C;
+    background:#FFF8FB;
+    border-color:rgba(218,28,92,.15);
+}
+
+.cqstats-sales-card-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:12px;
+}
+
+.cqstats-sale-card{
+    padding:16px;
+    background:#fff;
+    border:1px solid #E7E7EB;
+    border-radius:15px;
+    transition:.17s ease;
+}
+
+.cqstats-sale-card:hover{
+    transform:translateY(-2px);
+    border-color:rgba(218,28,92,.16);
+    box-shadow:0 12px 28px rgba(24,24,27,.045);
+}
+
+.cqstats-sale-date{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+}
+
+.cqstats-sale-date strong{
+    color:#3F3F46;
+    font-size:11px;
+}
+
+.cqstats-sale-date span{
+    color:#A1A1AA;
+    font-size:9px;
+    font-weight:700;
+}
+
+.cqstats-sale-revenue{
+    margin-top:17px;
+    color:#18181B;
+    font-size:23px;
+    font-weight:800;
+    letter-spacing:-.035em;
+}
+
+.cqstats-sale-revenue small{
+    color:#71717A;
+    font-size:9px;
+}
+
+.cqstats-sale-meta{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:8px;
+    color:#71717A;
+    font-size:9px;
+}
+
+.cqstats-sale-progress{
+    height:5px;
+    overflow:hidden;
+    margin-top:15px;
+    background:#F1F1F3;
+    border-radius:99px;
+}
+
+.cqstats-sale-progress i{
+    display:block;
+    height:100%;
+    background:
+        linear-gradient(
+            90deg,
+            #DA1C5C,
+            #EE6A96
+        );
+    border-radius:99px;
+}
+
+.cqstats-product-filters{
+    align-items:center;
+}
+
+.cqstats-search{
+    position:relative;
+    flex:1 1 280px;
+}
+
+.cqstats-search i{
+    position:absolute;
+    left:11px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#A1A1AA;
+    font-size:10px;
+}
+
+.cqstats-search input{
+    width:100%;
+    padding-left:30px;
+}
+
+.cqstats-product-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:12px;
+    margin-bottom:18px;
+}
+
+.cqstats-product-card{
+    min-width:0;
+    padding:16px;
+    background:#fff;
+    border:1px solid #E7E7EB;
+    border-radius:15px;
+    transition:.17s ease;
+}
+
+.cqstats-product-card:hover{
+    transform:translateY(-2px);
+    border-color:rgba(218,28,92,.16);
+    box-shadow:0 12px 28px rgba(24,24,27,.04);
+}
+
+.cqstats-stockout-card{
+    border-color:rgba(218,28,92,.13);
+}
+
+.cqstats-product-card-head{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+}
+
+.cqstats-product-id{
+    color:#A1A1AA;
+    font-size:9px;
+    font-weight:700;
+}
+
+.cqstats-badge{
+    padding:4px 7px;
+    border-radius:7px;
+    font-size:8px;
+    font-weight:800;
+}
+
+.cqstats-badge.success{
+    background:#ECFDF3;
+    color:#15803D;
+}
+
+.cqstats-badge.muted{
+    background:#F4F4F5;
+    color:#71717A;
+}
+
+.cqstats-badge.danger{
+    background:#FFF1F2;
+    color:#DA1C5C;
+}
+
+.cqstats-product-card h3{
+    min-height:34px;
+    margin:12px 0 5px;
+    color:#18181B;
+    font-size:13px;
+    font-weight:780;
+    line-height:1.35;
+}
+
+.cqstats-product-ref{
+    color:#A1A1AA;
+    font-size:9px;
+}
+
+.cqstats-product-tags{
+    display:flex;
+    gap:5px;
+    flex-wrap:wrap;
+    margin-top:11px;
+}
+
+.cqstats-product-tags span{
+    max-width:100%;
+    padding:4px 6px;
+    overflow:hidden;
+    background:#FAFAFA;
+    color:#71717A;
+    border:1px solid #F0F0F2;
+    border-radius:6px;
+    font-size:8px;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.cqstats-product-bottom{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:6px;
+    margin-top:15px;
+}
+
+.cqstats-product-bottom>div{
+    min-width:0;
+    padding:8px;
+    background:#FAFAFA;
+    border-radius:8px;
+}
+
+.cqstats-product-bottom span{
+    display:block;
+    margin-bottom:4px;
+    color:#A1A1AA;
+    font-size:7px;
+}
+
+.cqstats-product-bottom strong{
+    display:block;
+    overflow:hidden;
+    color:#3F3F46;
+    font-size:9px;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.cqstats-product-bottom strong.danger{
+    color:#DA1C5C;
+}
+
+.cqstats-product-activity{
+    margin-top:5px;
+}
+
+.cqstats-activity-list{
+    display:flex;
+    flex-direction:column;
+}
+
+.cqstats-activity-row{
+    display:grid;
+    grid-template-columns:8px 1fr auto;
+    align-items:center;
+    gap:10px;
+    padding:10px 0;
+    border-bottom:1px solid #F3F4F6;
+}
+
+.cqstats-activity-dot{
+    width:6px;
+    height:6px;
+    background:#DA1C5C;
+    border-radius:50%;
+}
+
+.cqstats-activity-row>div:nth-child(2){
+    min-width:0;
+}
+
+.cqstats-activity-row strong{
+    display:block;
+    overflow:hidden;
+    color:#3F3F46;
+    font-size:10px;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.cqstats-activity-row span{
+    display:block;
+    margin-top:2px;
+    color:#A1A1AA;
+    font-size:8px;
+}
+
+.cqstats-activity-row time{
+    color:#A1A1AA;
+    font-size:8px;
+    white-space:nowrap;
+}
+
+.cqstats-table-panel{
+    margin-bottom:13px;
+}
+
+.cqstats-table-wrap{
+    width:100%;
+    overflow-x:auto;
+}
+
+.cqstats-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.cqstats-table th{
+    padding:9px 10px;
+    background:#FAFAFA;
+    color:#71717A;
+    border-bottom:1px solid #E7E7EB;
+    font-size:8px;
+    font-weight:800;
+    text-align:left;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+}
+
+.cqstats-table td{
+    padding:10px;
+    color:#3F3F46;
+    border-bottom:1px solid #F3F4F6;
+    font-size:9px;
+}
+
+.cqstats-empty{
+    padding:30px;
+    color:#A1A1AA;
+    text-align:center;
+    font-size:10px;
+}
+
+.cqstats-full{
+    grid-column:1/-1;
+}
+
+
+/* TABLET */
+
+@media(max-width:1200px){
+
+    .cqstats-kpi-grid{
+        grid-template-columns:repeat(3,minmax(0,1fr));
+    }
+
+    .cqstats-kpi-grid-4{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .cqstats-product-grid,
+    .cqstats-sales-card-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:760px){
+
+    .cqstats-header,
+    .cqstats-section-title{
+        flex-direction:column;
+    }
+
+    .cqstats-kpi-grid,
+    .cqstats-kpi-grid-4,
+    .cqstats-two-columns,
+    .cqstats-product-grid,
+    .cqstats-sales-card-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cqstats-stock-layout{
+        flex-direction:column;
+        gap:18px;
+    }
+
+    .cqstats-stock-numbers{
+        width:100%;
+    }
+
+    .cqstats-product-bottom{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .cqstats-activity-row{
+        grid-template-columns:8px 1fr;
+    }
+
+    .cqstats-activity-row time{
+        grid-column:2;
+    }
+
+}
+
+
+
+/* ============================================================
+   COQUETTE_PRODUCTS_AUDIT_V2_CSS
+   ============================================================ */
+
+
+.cqstats-product-actions{
+    margin-top:12px;
+    padding-top:11px;
+    border-top:1px solid #F1F1F3;
+}
+
+
+.cqstats-product-audit-btn{
+    width:100%;
+    height:34px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:7px;
+
+    background:#FFF8FB;
+
+    color:#DA1C5C;
+
+    border:
+        1px solid rgba(218,28,92,.14);
+
+    border-radius:8px;
+
+    font-size:9px;
+    font-weight:750;
+
+    cursor:pointer;
+
+    transition:
+        background .15s ease,
+        border-color .15s ease,
+        transform .15s ease;
+}
+
+
+.cqstats-product-audit-btn:hover{
+    background:#FDECF2;
+    border-color:rgba(218,28,92,.25);
+    transform:translateY(-1px);
+}
+
+
+/* MODAL */
+
+.cqpa-modal{
+    position:fixed;
+    inset:0;
+    z-index:99999;
+
+    display:none;
+}
+
+
+.cqpa-modal.is-open{
+    display:block;
+}
+
+
+.cqpa-backdrop{
+    position:absolute;
+    inset:0;
+
+    background:
+        rgba(24,24,27,.46);
+
+    backdrop-filter:
+        blur(4px);
+}
+
+
+.cqpa-dialog{
+    position:absolute;
+
+    top:24px;
+    right:24px;
+    bottom:24px;
+
+    width:min(
+        900px,
+        calc(100vw - 48px)
+    );
+
+    display:flex;
+    flex-direction:column;
+
+    overflow:hidden;
+
+    background:#F7F8FA;
+
+    border:
+        1px solid rgba(255,255,255,.55);
+
+    border-radius:20px;
+
+    box-shadow:
+        0 30px 90px rgba(24,24,27,.22);
+
+    animation:
+        cqpaEnter .2s ease both;
+}
+
+
+@keyframes cqpaEnter{
+
+    from{
+        opacity:0;
+        transform:translateX(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+
+.cqpa-close{
+    position:absolute;
+
+    top:17px;
+    right:17px;
+
+    z-index:5;
+
+    width:34px;
+    height:34px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#fff;
+
+    color:#71717A;
+
+    border:1px solid #E4E4E7;
+    border-radius:9px;
+
+    cursor:pointer;
+}
+
+
+.cqpa-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+
+    gap:18px;
+
+    padding:
+        22px 70px 18px 22px;
+
+    background:#fff;
+
+    border-bottom:
+        1px solid #E7E7EB;
+}
+
+
+.cqpa-eyebrow{
+    margin-bottom:5px;
+
+    color:#DA1C5C;
+
+    font-size:9px;
+    font-weight:850;
+
+    letter-spacing:.14em;
+}
+
+
+.cqpa-header h2{
+    margin:0;
+
+    color:#18181B;
+
+    font-size:21px;
+    font-weight:800;
+
+    letter-spacing:-.025em;
+}
+
+
+.cqpa-header p{
+    margin:5px 0 0;
+
+    color:#71717A;
+
+    font-size:10px;
+}
+
+
+.cqpa-count{
+    flex:0 0 auto;
+
+    padding:7px 9px;
+
+    background:#FFF8FB;
+
+    color:#DA1C5C;
+
+    border:
+        1px solid rgba(218,28,92,.13);
+
+    border-radius:8px;
+
+    font-size:9px;
+    font-weight:800;
+}
+
+
+/* SUMMARY */
+
+.cqpa-product-summary{
+    display:grid;
+
+    grid-template-columns:
+        repeat(5,minmax(0,1fr));
+
+    gap:8px;
+
+    padding:12px 18px;
+
+    background:#fff;
+
+    border-bottom:
+        1px solid #E7E7EB;
+}
+
+
+.cqpa-product-summary>div{
+    min-width:0;
+
+    padding:9px;
+
+    background:#FAFAFA;
+
+    border:1px solid #F1F1F3;
+    border-radius:9px;
+}
+
+
+.cqpa-product-summary span{
+    display:block;
+
+    margin-bottom:4px;
+
+    color:#A1A1AA;
+
+    font-size:7px;
+    font-weight:700;
+}
+
+
+.cqpa-product-summary strong{
+    display:block;
+
+    overflow:hidden;
+
+    color:#3F3F46;
+
+    font-size:9px;
+
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+
+.cqpa-product-summary strong.danger{
+    color:#DA1C5C;
+}
+
+
+.cqpa-product-summary small{
+    display:block;
+
+    margin-top:3px;
+
+    overflow:hidden;
+
+    color:#A1A1AA;
+
+    font-size:7px;
+
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+
+/* BODY */
+
+.cqpa-body{
+    flex:1;
+
+    overflow-y:auto;
+
+    padding:18px;
+}
+
+
+.cqpa-loading,
+.cqpa-empty{
+    padding:45px 20px;
+
+    color:#A1A1AA;
+
+    font-size:10px;
+    text-align:center;
+}
+
+
+.cqpa-loading i{
+    margin-right:6px;
+
+    color:#DA1C5C;
+}
+
+
+/* TIMELINE */
+
+.cqpa-timeline{
+    position:relative;
+}
+
+
+.cqpa-timeline:before{
+    content:"";
+
+    position:absolute;
+
+    top:12px;
+    bottom:12px;
+    left:17px;
+
+    width:1px;
+
+    background:#E4E4E7;
+}
+
+
+.cqpa-event{
+    position:relative;
+
+    margin-bottom:12px;
+}
+
+
+.cqpa-event-line{
+    display:grid;
+
+    grid-template-columns:
+        36px 1fr;
+
+    gap:11px;
+}
+
+
+.cqpa-event-icon{
+    position:relative;
+
+    z-index:2;
+
+    width:34px;
+    height:34px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#FDECF2;
+
+    color:#DA1C5C;
+
+    border:
+        4px solid #F7F8FA;
+
+    border-radius:50%;
+
+    font-size:9px;
+}
+
+
+.cqpa-event.success .cqpa-event-icon{
+    background:#ECFDF3;
+    color:#15803D;
+}
+
+
+.cqpa-event.danger .cqpa-event-icon{
+    background:#FFF1F2;
+    color:#DC2626;
+}
+
+
+.cqpa-event.stock .cqpa-event-icon{
+    background:#EFF6FF;
+    color:#2563EB;
+}
+
+
+.cqpa-event.image .cqpa-event-icon{
+    background:#F5F3FF;
+    color:#7C3AED;
+}
+
+
+.cqpa-event-main{
+    min-width:0;
+
+    padding:14px;
+
+    background:#fff;
+
+    border:1px solid #E7E7EB;
+    border-radius:13px;
+
+    box-shadow:
+        0 2px 8px rgba(24,24,27,.018);
+}
+
+
+.cqpa-event-head{
+    display:flex;
+
+    justify-content:space-between;
+    align-items:flex-start;
+
+    gap:16px;
+}
+
+
+.cqpa-event-nature{
+    display:block;
+
+    margin-bottom:4px;
+
+    color:#DA1C5C;
+
+    font-size:7px;
+    font-weight:850;
+
+    letter-spacing:.09em;
+    text-transform:uppercase;
+}
+
+
+.cqpa-event-head h3{
+    margin:0;
+
+    color:#18181B;
+
+    font-size:12px;
+    font-weight:780;
+}
+
+
+.cqpa-event-head time{
+    flex:0 0 auto;
+
+    color:#A1A1AA;
+
+    font-size:8px;
+    white-space:nowrap;
+}
+
+
+/* ACTOR */
+
+.cqpa-actor{
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    margin-top:8px;
+
+    color:#71717A;
+
+    font-size:8px;
+}
+
+
+.cqpa-actor i{
+    color:#A1A1AA;
+}
+
+
+.cqpa-actor strong{
+    color:#52525B;
+}
+
+
+.cqpa-actor span{
+    overflow:hidden;
+
+    color:#A1A1AA;
+
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+
+/* OLD / NEW */
+
+.cqpa-change-grid{
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,1fr)
+        28px
+        minmax(0,1fr);
+
+    align-items:stretch;
+
+    gap:8px;
+
+    margin-top:12px;
+}
+
+
+.cqpa-value{
+    min-width:0;
+
+    padding:10px;
+
+    background:#FAFAFA;
+
+    border:1px solid #F0F0F2;
+    border-radius:9px;
+}
+
+
+.cqpa-value.old{
+    background:#FFF9F9;
+}
+
+
+.cqpa-value.new{
+    background:#F8FFF9;
+}
+
+
+.cqpa-value span{
+    display:block;
+
+    margin-bottom:6px;
+
+    color:#A1A1AA;
+
+    font-size:7px;
+    font-weight:750;
+}
+
+
+.cqpa-value pre{
+    max-height:170px;
+
+    margin:0;
+
+    overflow:auto;
+
+    color:#3F3F46;
+
+    background:transparent;
+
+    border:0;
+
+    font-family:inherit;
+
+    font-size:8px;
+    line-height:1.55;
+
+    white-space:pre-wrap;
+    word-break:break-word;
+}
+
+
+.cqpa-arrow{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#A1A1AA;
+
+    font-size:9px;
+}
+
+
+/* FOOTER */
+
+.cqpa-event-footer{
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    margin-top:10px;
+
+    padding-top:8px;
+
+    border-top:1px solid #F3F4F6;
+
+    color:#A1A1AA;
+
+    font-size:7px;
+}
+
+
+.cqpa-event-footer details{
+    max-width:100%;
+}
+
+
+.cqpa-event-footer summary{
+    cursor:pointer;
+}
+
+
+.cqpa-event-footer code{
+    display:block;
+
+    max-width:650px;
+
+    margin-top:5px;
+
+    padding:6px;
+
+    overflow:auto;
+
+    background:#FAFAFA;
+
+    color:#52525B;
+
+    border-radius:6px;
+
+    font-size:7px;
+}
+
+
+/* LOAD MORE */
+
+.cqpa-load-more{
+    width:100%;
+
+    margin-top:10px;
+    padding:10px;
+
+    background:#fff;
+
+    color:#DA1C5C;
+
+    border:
+        1px solid rgba(218,28,92,.16);
+
+    border-radius:9px;
+
+    font-size:9px;
+    font-weight:750;
+
+    cursor:pointer;
+}
+
+
+body.cqpa-lock{
+    overflow:hidden;
+}
+
+
+/* TABLET */
+
+@media(max-width:1100px){
+
+    .cqpa-product-summary{
+        grid-template-columns:
+            repeat(3,minmax(0,1fr));
+    }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:760px){
+
+    .cqpa-dialog{
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+
+        width:100%;
+
+        border-radius:0;
+    }
+
+    .cqpa-header{
+        padding:
+            18px 58px 15px 15px;
+    }
+
+    .cqpa-product-summary{
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+        padding:
+            10px 12px;
+    }
+
+    .cqpa-body{
+        padding:12px;
+    }
+
+    .cqpa-change-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cqpa-arrow{
+        transform:rotate(90deg);
+
+        min-height:18px;
+    }
+
+    .cqpa-event-head{
+        flex-direction:column;
+        gap:4px;
+    }
+
+}
+
+
+
+/* ============================================================
+   COQUETTE_DASHBOARD_OVERVIEW_V11_CSS
+   ============================================================ */
+
+.coquette-dashboard-overview{
+    grid-column:1 / -1;
+    width:100%;
+    min-width:0;
+    margin:0;
+    padding:0;
+    background:transparent;
+}
+
+
+.cqhub-overview-header{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+
+    gap:18px;
+
+    margin-top:2px;
+    margin-bottom:16px;
+}
+
+
+.cqhub-overview-header h2{
+    margin:4px 0 3px;
+
+    color:#18181B;
+
+    font-size:20px;
+    font-weight:800;
+
+    letter-spacing:-.025em;
+}
+
+
+.cqhub-overview-header p{
+    margin:0;
+
+    color:#71717A;
+
+    font-size:10px;
+}
+
+
+.cqhub-overview-actions{
+    display:flex;
+    align-items:flex-end;
+    gap:10px;
+}
+
+
+.cqhub-period-form{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+    margin:0;
+}
+
+
+.cqhub-period-form label{
+    margin:0;
+
+    color:#A1A1AA;
+
+    font-size:7px;
+    font-weight:750;
+
+    text-transform:uppercase;
+    letter-spacing:.06em;
+}
+
+
+.cqhub-period-form select{
+    height:34px;
+    min-width:125px;
+
+    padding:
+        0 30px
+        0 10px;
+
+    background:#fff;
+
+    color:#3F3F46;
+
+    border:
+        1px solid #E4E4E7;
+
+    border-radius:8px;
+
+    font-size:9px;
+}
+
+
+.cqhub-all-stats{
+    height:34px;
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:7px;
+
+    padding:0 12px;
+
+    background:#FFF8FB;
+
+    color:#DA1C5C !important;
+
+    border:
+        1px solid rgba(218,28,92,.14);
+
+    border-radius:8px;
+
+    font-size:9px;
+    font-weight:750;
+
+    text-decoration:none !important;
+}
+
+
+.cqhub-all-stats:hover{
+    background:#FDECF2;
+}
+
+
+.cqhub-overview-content{
+    width:100%;
+    min-width:0;
+}
+
+
+.coquette-dashboard-overview
+.cqstats-kpi-grid{
+    margin-top:0;
+}
+
+
+.coquette-dashboard-overview
+.cqstats-two-columns{
+    width:100%;
+}
+
+
+.coquette-dashboard-overview
+.cqstats-panel{
+    min-width:0;
+}
+
+
+@media(max-width:900px){
+
+    .cqhub-overview-header{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+
+    .cqhub-overview-actions{
+        width:100%;
+    }
+
+
+    .cqhub-period-form{
+        flex:1;
+    }
+
+
+    .cqhub-period-form select{
+        width:100%;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .cqhub-overview-actions{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+
+    .cqhub-all-stats{
+        width:100%;
+    }
+
+}
+
+
+
+/* ============================================================
+   COQUETTE_TRAFFIC_ANALYTICS_V1_CSS
+   ============================================================ */
+
+.cqtraffic-panel{
+    width:100%;
+
+    margin:16px 0;
+
+    padding:18px;
+
+    background:#fff;
+
+    border:1px solid #E7E7EB;
+    border-radius:14px;
+
+    box-shadow:
+        0 2px 10px rgba(24,24,27,.025);
+}
+
+
+.cqtraffic-head{
+    display:flex;
+
+    align-items:flex-start;
+    justify-content:space-between;
+
+    gap:20px;
+
+    margin-bottom:14px;
+}
+
+
+.cqtraffic-head h2{
+    margin:3px 0 4px;
+
+    color:#18181B;
+
+    font-size:14px;
+    font-weight:800;
+
+    letter-spacing:-.015em;
+}
+
+
+.cqtraffic-head p{
+    margin:0;
+
+    color:#71717A;
+
+    font-size:8px;
+}
+
+
+.cqtraffic-period{
+    flex:0 0 auto;
+
+    padding:6px 8px;
+
+    background:#FAFAFA;
+
+    color:#71717A;
+
+    border:1px solid #E7E7EB;
+    border-radius:7px;
+
+    font-size:8px;
+    font-weight:750;
+}
+
+
+.cqtraffic-kpis{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,minmax(0,1fr));
+
+    gap:8px;
+
+    margin-bottom:15px;
+}
+
+
+.cqtraffic-kpis>div{
+    min-width:0;
+
+    padding:10px 11px;
+
+    background:#FAFAFA;
+
+    border:1px solid #F0F0F2;
+    border-radius:9px;
+}
+
+
+.cqtraffic-kpis span{
+    display:block;
+
+    margin-bottom:4px;
+
+    color:#A1A1AA;
+
+    font-size:7px;
+    font-weight:700;
+}
+
+
+.cqtraffic-kpis strong{
+    display:block;
+
+    color:#18181B;
+
+    font-size:15px;
+    font-weight:800;
+
+    letter-spacing:-.02em;
+}
+
+
+.cqtraffic-chart-wrap{
+    width:100%;
+    overflow:hidden;
+
+    padding:2px 0 0;
+}
+
+
+.cqtraffic-chart{
+    display:block;
+
+    width:100%;
+    height:290px;
+
+    overflow:visible;
+}
+
+
+.cqtraffic-grid-line{
+    stroke:#F0F0F2;
+    stroke-width:1;
+}
+
+
+.cqtraffic-axis-line{
+    stroke:#D4D4D8;
+    stroke-width:1;
+}
+
+
+.cqtraffic-axis-label{
+    fill:#A1A1AA;
+
+    font-size:10px;
+}
+
+
+.cqtraffic-line{
+    fill:none;
+
+    stroke-width:3;
+
+    vector-effect:
+        non-scaling-stroke;
+
+    stroke-linejoin:round;
+    stroke-linecap:round;
+}
+
+
+.cqtraffic-line-session{
+    stroke:#2563EB;
+}
+
+
+.cqtraffic-line-order{
+    stroke:#DA1C5C;
+}
+
+
+.cqtraffic-dot{
+    vector-effect:
+        non-scaling-stroke;
+
+    stroke:#fff;
+    stroke-width:2;
+}
+
+
+.cqtraffic-dot-session{
+    fill:#2563EB;
+}
+
+
+.cqtraffic-dot-order{
+    fill:#DA1C5C;
+}
+
+
+.cqtraffic-legend{
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin-top:7px;
+
+    color:#71717A;
+
+    font-size:8px;
+}
+
+
+.cqtraffic-legend span{
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+
+.cqtraffic-legend i{
+    width:8px;
+    height:8px;
+
+    display:inline-block;
+
+    border-radius:50%;
+}
+
+
+.cqtraffic-legend i.session{
+    background:#2563EB;
+}
+
+
+.cqtraffic-legend i.orders{
+    background:#DA1C5C;
+}
+
+
+.cqtraffic-note{
+    margin-top:8px;
+
+    color:#A1A1AA;
+
+    font-size:7px;
+}
+
+
+@media(max-width:900px){
+
+    .cqtraffic-kpis{
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .cqtraffic-panel{
+        padding:13px;
+    }
+
+
+    .cqtraffic-head{
+        flex-direction:column;
+        gap:8px;
+    }
+
+
+    .cqtraffic-kpis{
+        grid-template-columns:1fr 1fr;
+    }
+
+
+    .cqtraffic-chart{
+        height:230px;
+    }
+
+}
+
+
+
+/* ============================================================
+   COQUETTE_ANALYTICS_VISUAL_MIGRATION_V1_CSS
+   ============================================================ */
+
+.cqav-help{
+    margin:14px 0 18px;
+
+    background:#FCFCFD;
+
+    border:1px solid #ECECF0;
+    border-radius:10px;
+
+    overflow:hidden;
+}
+
+
+.cqav-help summary{
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    padding:10px 12px;
+
+    color:#DA1C5C;
+
+    font-size:9px;
+    font-weight:800;
+
+    cursor:pointer;
+
+    list-style:none;
+}
+
+
+.cqav-help summary::-webkit-details-marker{
+    display:none;
+}
+
+
+.cqav-help>div{
+    padding:
+        0 12px
+        12px;
+
+    color:#71717A;
+
+    font-size:9px;
+    line-height:1.65;
+}
+
+
+.cqav-visual{
+    margin:
+        8px 0
+        22px;
+
+    padding-bottom:22px;
+
+    border-bottom:
+        1px solid #F0F0F2;
+}
+
+
+/* DONUT */
+
+.cqav-donut-layout{
+    display:grid;
+
+    grid-template-columns:
+        180px minmax(0,1fr);
+
+    align-items:center;
+
+    gap:28px;
+
+    min-height:190px;
+}
+
+
+.cqav-donut{
+    width:170px;
+    height:170px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    box-shadow:
+        0 10px 25px rgba(24,24,27,.06);
+}
+
+
+.cqav-donut-hole{
+    width:118px;
+    height:118px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    background:#fff;
+
+    border-radius:50%;
+
+    box-shadow:
+        inset 0 0 0 1px #ECECF0;
+}
+
+
+.cqav-donut-hole strong{
+    color:#18181B;
+
+    font-size:22px;
+    font-weight:850;
+
+    letter-spacing:-.03em;
+}
+
+
+.cqav-donut-hole span{
+    margin-top:3px;
+
+    color:#A1A1AA;
+
+    font-size:8px;
+}
+
+
+.cqav-donut-legend{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:9px;
+
+    min-width:0;
+}
+
+
+.cqav-donut-row{
+    display:flex;
+
+    align-items:center;
+    justify-content:space-between;
+
+    gap:15px;
+}
+
+
+.cqav-donut-name{
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    min-width:0;
+}
+
+
+.cqav-donut-name i{
+    width:8px;
+    height:8px;
+
+    flex:0 0 8px;
+
+    border-radius:50%;
+}
+
+
+.cqav-donut-name span{
+    overflow:hidden;
+
+    color:#52525B;
+
+    font-size:9px;
+
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+
+.cqav-donut-row strong{
+    flex:0 0 auto;
+
+    color:#18181B;
+
+    font-size:9px;
+    font-weight:800;
+}
+
+
+/* BARRES */
+
+.cqav-bars{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+}
+
+
+.cqav-bar-row{
+    display:grid;
+
+    grid-template-columns:
+        minmax(130px,220px)
+        minmax(100px,1fr)
+        70px;
+
+    align-items:center;
+
+    gap:12px;
+}
+
+
+.cqav-bar-label{
+    overflow:hidden;
+
+    color:#52525B;
+
+    font-size:9px;
+
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+
+.cqav-bar-track{
+    height:9px;
+
+    overflow:hidden;
+
+    background:#F4F4F5;
+
+    border-radius:999px;
+}
+
+
+.cqav-bar-track i{
+    display:block;
+
+    height:100%;
+
+    min-width:2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #DA1C5C,
+            #F06595
+        );
+
+    border-radius:999px;
+}
+
+
+.cqav-bar-row strong{
+    color:#18181B;
+
+    font-size:9px;
+    font-weight:800;
+
+    text-align:right;
+}
+
+
+@media(max-width:800px){
+
+    .cqav-donut-layout{
+        grid-template-columns:1fr;
+    }
+
+    .cqav-donut{
+        margin:0 auto;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .cqav-bar-row{
+        grid-template-columns:
+            minmax(90px,120px)
+            1fr
+            50px;
+
+        gap:7px;
+    }
+
+}
+
+
+
+/* ============================================================
+   COQUETTE_ANALYTICS_DESIGN_COMPACT_V2_CSS
+   Plus compact + typography lisible
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   GENERAL STATISTICS TYPOGRAPHY
+   ------------------------------------------------------------ */
+
+.cqstats-page{
+    font-size:13px;
+}
+
+
+.cqstats-page .cqstats-header h1{
+    font-size:28px;
+    line-height:1.15;
+}
+
+
+.cqstats-page .cqstats-header p{
+    font-size:13px;
+    line-height:1.55;
+}
+
+
+.cqstats-page .cqstats-eyebrow,
+.cqstats-page .cqstats-section-label{
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:.07em;
+}
+
+
+.cqstats-page .cqstats-tabs a{
+    font-size:13px;
+}
+
+
+.cqstats-page .cqstats-section-title{
+    margin-bottom:18px;
+}
+
+
+.cqstats-page .cqstats-section-title h2{
+    margin:4px 0 5px;
+
+    font-size:23px;
+    line-height:1.2;
+
+    font-weight:800;
+}
+
+
+.cqstats-page .cqstats-section-title p{
+    margin:0;
+
+    font-size:13px;
+    line-height:1.5;
+}
+
+
+/* ------------------------------------------------------------
+   KPI
+   ------------------------------------------------------------ */
+
+.cqstats-page .cqstats-kpi-grid{
+    gap:14px;
+    margin-bottom:18px;
+}
+
+
+.cqstats-page .cqstats-kpi{
+    padding:17px 18px;
+
+    border-radius:13px;
+}
+
+
+.cqstats-page .cqstats-kpi span{
+    font-size:12px;
+    line-height:1.35;
+
+    font-weight:650;
+}
+
+
+.cqstats-page .cqstats-kpi strong{
+    margin-top:5px;
+
+    font-size:25px;
+    line-height:1.15;
+
+    font-weight:800;
+}
+
+
+.cqstats-page .cqstats-kpi small{
+    margin-top:5px;
+
+    font-size:11px;
+    line-height:1.4;
+}
+
+
+/* ------------------------------------------------------------
+   PANELS ANALYTICS
+   Graphique à gauche + tableau à droite
+   ------------------------------------------------------------ */
+
+.cqstats-page
+.cqstats-analytics-visual-panel{
+    display:grid;
+
+    grid-template-columns:
+        minmax(300px, 38%)
+        minmax(0, 62%);
+
+    column-gap:24px;
+    row-gap:0;
+
+    align-items:start;
+
+    padding:20px 22px;
+
+    margin-bottom:18px;
+
+    border-radius:15px;
+}
+
+
+.cqstats-page
+.cqstats-analytics-visual-panel
+.cqstats-panel-head{
+    grid-column:1 / -1;
+
+    margin-bottom:0;
+}
+
+
+.cqstats-page
+.cqstats-analytics-visual-panel
+.cqstats-panel-head h2{
+    margin-top:3px;
+
+    font-size:18px;
+    line-height:1.25;
+
+    font-weight:800;
+}
+
+
+.cqstats-page
+.cqstats-analytics-visual-panel
+.cqav-help{
+    grid-column:1 / -1;
+
+    margin:
+        12px 0
+        18px;
+}
+
+
+.cqstats-page
+.cqstats-analytics-visual-panel
+.cqav-visual{
+    grid-column:1;
+
+    margin:0;
+
+    padding:
+        5px 20px
+        5px 0;
+
+    border-bottom:0;
+    border-right:1px solid #F0F0F2;
+}
+
+
+.cqstats-page
+.cqstats-analytics-visual-panel
+.cqstats-table-wrap{
+    grid-column:2;
+
+    margin:0;
+
+    align-self:start;
+}
+
+
+.cqstats-page
+.cqstats-analytics-visual-panel
+.cqstats-empty{
+    grid-column:1 / -1;
+}
+
+
+/* ------------------------------------------------------------
+   HELP BOX
+   ------------------------------------------------------------ */
+
+.cqstats-page .cqav-help{
+    border-radius:9px;
+}
+
+
+.cqstats-page .cqav-help summary{
+    padding:11px 13px;
+
+    font-size:12px;
+    line-height:1.4;
+}
+
+
+.cqstats-page .cqav-help>div{
+    padding:
+        0 13px
+        13px;
+
+    font-size:12px;
+    line-height:1.55;
+}
+
+
+/* ------------------------------------------------------------
+   DONUT
+   ------------------------------------------------------------ */
+
+.cqstats-page .cqav-donut-layout{
+    grid-template-columns:
+        170px minmax(0,1fr);
+
+    gap:20px;
+
+    min-height:175px;
+}
+
+
+.cqstats-page .cqav-donut{
+    width:165px;
+    height:165px;
+}
+
+
+.cqstats-page .cqav-donut-hole{
+    width:112px;
+    height:112px;
+}
+
+
+.cqstats-page .cqav-donut-hole strong{
+    font-size:23px;
+}
+
+
+.cqstats-page .cqav-donut-hole span{
+    margin-top:4px;
+
+    font-size:11px;
+}
+
+
+.cqstats-page .cqav-donut-legend{
+    gap:10px;
+}
+
+
+.cqstats-page .cqav-donut-row{
+    gap:10px;
+}
+
+
+.cqstats-page .cqav-donut-name{
+    gap:8px;
+}
+
+
+.cqstats-page .cqav-donut-name i{
+    width:10px;
+    height:10px;
+
+    flex-basis:10px;
+}
+
+
+.cqstats-page .cqav-donut-name span{
+    font-size:12px;
+    line-height:1.35;
+}
+
+
+.cqstats-page .cqav-donut-row strong{
+    font-size:12px;
+}
+
+
+/* ------------------------------------------------------------
+   BAR CHARTS
+   ------------------------------------------------------------ */
+
+.cqstats-page .cqav-bars{
+    gap:13px;
+}
+
+
+.cqstats-page .cqav-bar-row{
+    grid-template-columns:
+        minmax(115px, 175px)
+        minmax(80px,1fr)
+        60px;
+
+    gap:10px;
+}
+
+
+.cqstats-page .cqav-bar-label{
+    font-size:11px;
+    line-height:1.35;
+}
+
+
+.cqstats-page .cqav-bar-track{
+    height:11px;
+}
+
+
+.cqstats-page .cqav-bar-row strong{
+    font-size:11px;
+}
+
+
+/* ------------------------------------------------------------
+   TABLES
+   ------------------------------------------------------------ */
+
+.cqstats-page
+.cqstats-analytics-visual-panel
+.cqstats-table{
+    width:100%;
+
+    font-size:12px;
+}
+
+
+.cqstats-page
+.cqstats-analytics-visual-panel
+.cqstats-table th{
+    padding:11px 12px;
+
+    font-size:11px;
+    line-height:1.3;
+
+    font-weight:800;
+
+    white-space:nowrap;
+}
+
+
+.cqstats-page
+.cqstats-analytics-visual-panel
+.cqstats-table td{
+    padding:11px 12px;
+
+    font-size:12px;
+    line-height:1.4;
+}
+
+
+.cqstats-page
+.cqstats-analytics-visual-panel
+.cqstats-table tbody tr:last-child td{
+    border-bottom:0;
+}
+
+
+/* ------------------------------------------------------------
+   TRAFFIC CHART
+   ------------------------------------------------------------ */
+
+.cqstats-page .cqtraffic-panel{
+    padding:20px 22px;
+
+    margin:
+        15px 0
+        18px;
+
+    border-radius:15px;
+}
+
+
+.cqstats-page .cqtraffic-head{
+    margin-bottom:16px;
+}
+
+
+.cqstats-page .cqtraffic-head h2{
+    font-size:18px;
+}
+
+
+.cqstats-page .cqtraffic-head p{
+    font-size:12px;
+    line-height:1.45;
+}
+
+
+.cqstats-page .cqtraffic-period{
+    padding:7px 10px;
+
+    font-size:11px;
+}
+
+
+.cqstats-page .cqtraffic-kpis{
+    gap:10px;
+
+    margin-bottom:13px;
+}
+
+
+.cqstats-page .cqtraffic-kpis>div{
+    padding:12px 14px;
+}
+
+
+.cqstats-page .cqtraffic-kpis span{
+    font-size:11px;
+}
+
+
+.cqstats-page .cqtraffic-kpis strong{
+    font-size:19px;
+}
+
+
+.cqstats-page .cqtraffic-chart{
+    height:250px;
+}
+
+
+.cqstats-page .cqtraffic-axis-label{
+    font-size:11px;
+}
+
+
+.cqstats-page .cqtraffic-legend{
+    margin-top:8px;
+
+    font-size:11px;
+}
+
+
+.cqstats-page .cqtraffic-note{
+    margin-top:7px;
+
+    font-size:10px;
+}
+
+
+/* ------------------------------------------------------------
+   MONETISATION / OTHER TABLE PANELS
+   ------------------------------------------------------------ */
+
+.cqstats-page .cqstats-table-panel{
+    margin-bottom:18px;
+}
+
+
+.cqstats-page .cqstats-table-panel
+.cqstats-panel-head h2{
+    font-size:18px;
+}
+
+
+/* ------------------------------------------------------------
+   RESPONSIVE
+   ------------------------------------------------------------ */
+
+@media(max-width:1200px){
+
+    .cqstats-page
+    .cqstats-analytics-visual-panel{
+        grid-template-columns:
+            minmax(280px, 42%)
+            minmax(0, 58%);
+
+        column-gap:18px;
+    }
+
+
+    .cqstats-page .cqav-donut-layout{
+        grid-template-columns:145px 1fr;
+    }
+
+
+    .cqstats-page .cqav-donut{
+        width:140px;
+        height:140px;
+    }
+
+
+    .cqstats-page .cqav-donut-hole{
+        width:94px;
+        height:94px;
+    }
+
+}
+
+
+@media(max-width:950px){
+
+    .cqstats-page
+    .cqstats-analytics-visual-panel{
+        display:block;
+    }
+
+
+    .cqstats-page
+    .cqstats-analytics-visual-panel
+    .cqav-visual{
+        margin-bottom:18px;
+
+        padding:
+            0 0
+            18px;
+
+        border-right:0;
+
+        border-bottom:
+            1px solid #F0F0F2;
+    }
+
+
+    .cqstats-page
+    .cqstats-analytics-visual-panel
+    .cqstats-table-wrap{
+        width:100%;
+    }
+
+
+    .cqstats-page .cqav-donut-layout{
+        grid-template-columns:
+            170px 1fr;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .cqstats-page .cqstats-section-title h2{
+        font-size:20px;
+    }
+
+
+    .cqstats-page .cqstats-kpi strong{
+        font-size:21px;
+    }
+
+
+    .cqstats-page
+    .cqstats-analytics-visual-panel{
+        padding:16px;
+    }
+
+
+    .cqstats-page .cqav-donut-layout{
+        grid-template-columns:1fr;
+
+        gap:16px;
+    }
+
+
+    .cqstats-page .cqav-donut{
+        margin:0 auto;
+    }
+
+
+    .cqstats-page .cqtraffic-kpis{
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+    }
+
+
+    .cqstats-page .cqtraffic-chart{
+        height:220px;
+    }
+
+}
+
+
+/* === COQUETTE HUB MOBILE V1 START === */
+
+/*
+ * Couche mobile Coquette HUB.
+ * Desktop non modifié.
+ * Le comportement natif mobile/off-canvas de Perfex est conservé.
+ */
+
+
+/* ==========================================================
+   TABLET / SMALL LAPTOP
+   ========================================================== */
+
+@media (max-width: 991px) {
+
+    /*
+     * Eviter tout débordement horizontal global.
+     */
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    #wrapper,
+    #wrapper .content,
+    .content,
+    .panel_s,
+    .panel-body {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+
+    /*
+     * Branding Coquette :
+     * ne pas casser le header responsive natif Perfex.
+     */
+    #header .coquette-hub-header-logo,
+    #header #logo img {
+        max-width: 145px !important;
+        height: auto !important;
+        object-fit: contain;
+    }
+
+    .coquette-hub-sidebar-brand {
+        max-width: 100%;
+    }
+
+    .coquette-hub-sidebar-brand img {
+        max-width: 145px !important;
+        height: auto !important;
+    }
+
+
+    /*
+     * Dashboard.
+     */
+    .coquette-dashboard-header {
+        align-items: flex-start;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .coquette-dashboard-header > * {
+        min-width: 0;
+    }
+
+
+    /*
+     * Tables Perfex / HUB.
+     */
+    .table-responsive,
+    .cqstats-table-wrap {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto !important;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .dataTables_wrapper {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /*
+     * Modals utilisables sur tablette.
+     */
+    .modal-dialog {
+        max-width: calc(100vw - 30px);
+    }
+
+
+    /*
+     * Statistics.
+     */
+    .cqstats-page {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cqstats-tabs {
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+    }
+
+    .cqstats-tabs a {
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 767px) {
+
+    /*
+     * Contenu général Perfex.
+     */
+    #wrapper .content,
+    .content {
+        max-width: 100%;
+    }
+
+    .panel_s,
+    .panel-body {
+        max-width: 100%;
+    }
+
+
+    /*
+     * Header / branding.
+     *
+     * On NE force pas la position de #menu.sidebar :
+     * Perfex continue de gérer son hamburger/off-canvas.
+     */
+    #header {
+        max-width: 100%;
+    }
+
+    #header #logo {
+        min-width: 0 !important;
+        max-width: 150px !important;
+    }
+
+    #header .coquette-hub-header-logo,
+    #header #logo img {
+        max-width: 118px !important;
+        width: auto !important;
+        height: auto !important;
+    }
+
+    .coquette-hub-brand-title {
+        font-size: 12px !important;
+        white-space: nowrap;
+    }
+
+    .coquette-hub-sidebar-brand img {
+        max-width: 125px !important;
+    }
+
+
+    /*
+     * Dashboard custom Coquette.
+     */
+    .coquette-dashboard {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .coquette-dashboard-header {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .coquette-dashboard-header h1 {
+        font-size: 24px !important;
+        line-height: 1.2;
+        overflow-wrap: anywhere;
+    }
+
+    .coquette-dashboard-header p {
+        line-height: 1.5;
+    }
+
+
+    /*
+     * STATISTICS - HEADER.
+     */
+    .cqstats-page {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .cqstats-header,
+    .cqstats-section-title,
+    .cqstats-panel-head {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .cqstats-header {
+        flex-direction: column;
+    }
+
+    .cqstats-header h1 {
+        font-size: 24px !important;
+        line-height: 1.2;
+    }
+
+    .cqstats-header p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .cqstats-sync-pill {
+        align-self: flex-start;
+    }
+
+
+    /*
+     * Tabs horizontaux accessibles au doigt.
+     */
+    .cqstats-tabs {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        flex-wrap: nowrap;
+
+        -webkit-overflow-scrolling: touch;
+
+        padding-bottom: 4px;
+    }
+
+    .cqstats-tabs a {
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
+
+
+    /*
+     * Filtres :
+     * un champ par ligne sur mobile.
+     */
+    .cqstats-filters,
+    .cqstats-product-filters {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 10px;
+    }
+
+    .cqstats-filters > *,
+    .cqstats-product-filters > * {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cqstats-filters label {
+        width: 100%;
+    }
+
+    .cqstats-filters select,
+    .cqstats-product-filters select,
+    .cqstats-product-filters input,
+    .cqstats-search,
+    .cqstats-search input {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+
+    /*
+     * KPI :
+     * 2 cartes par ligne sur téléphone normal.
+     */
+    .cqstats-kpi-grid,
+    .cqstats-kpi-grid-4 {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 10px;
+    }
+
+    .cqstats-kpi {
+        min-width: 0;
+        padding: 14px !important;
+    }
+
+    .cqstats-kpi span {
+        font-size: 11px;
+    }
+
+    .cqstats-kpi strong {
+        font-size: 20px !important;
+        line-height: 1.2;
+        overflow-wrap: anywhere;
+    }
+
+    .cqstats-kpi small {
+        font-size: 10px;
+        line-height: 1.35;
+    }
+
+
+    /*
+     * Colonnes / cards.
+     */
+    .cqstats-two-columns,
+    .cqstats-product-grid,
+    .cqstats-sales-card-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .cqstats-panel,
+    .cqstats-table-panel,
+    .cqstats-analytics-visual-panel {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .cqstats-panel {
+        padding: 15px !important;
+    }
+
+    .cqstats-panel-head {
+        flex-wrap: wrap;
+    }
+
+    .cqstats-panel-head h2 {
+        font-size: 18px !important;
+    }
+
+
+    /*
+     * Cards produit.
+     */
+    .cqstats-product-card {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .cqstats-product-card h3 {
+        overflow-wrap: anywhere;
+    }
+
+    .cqstats-product-tags {
+        flex-wrap: wrap;
+    }
+
+    .cqstats-product-bottom {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+    }
+
+
+    /*
+     * Activité.
+     */
+    .cqstats-activity-row {
+        grid-template-columns:
+            8px minmax(0, 1fr) !important;
+    }
+
+    .cqstats-activity-row time {
+        grid-column: 2;
+        margin-top: 3px;
+    }
+
+
+    /*
+     * TABLES
+     *
+     * On garde leurs colonnes lisibles au lieu
+     * de tout écraser sur 350px.
+     */
+    .cqstats-table-wrap,
+    .table-responsive {
+        display: block;
+        width: 100%;
+
+        overflow-x: auto !important;
+        overflow-y: hidden;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .cqstats-table {
+        width: 100%;
+        min-width: 620px;
+    }
+
+    .cqstats-table th,
+    .cqstats-table td {
+        white-space: nowrap;
+    }
+
+
+    /*
+     * Analytics visual panels.
+     */
+    .cqstats-page
+    .cqstats-analytics-visual-panel {
+        display: block;
+        padding: 14px !important;
+    }
+
+    .cqstats-page
+    .cqstats-analytics-visual-panel
+    .cqav-visual {
+        width: 100%;
+
+        padding:
+            0 0
+            15px !important;
+
+        margin-bottom: 15px;
+
+        border-right: 0 !important;
+    }
+
+    .cqstats-page
+    .cqstats-analytics-visual-panel
+    .cqstats-table-wrap {
+        width: 100%;
+    }
+
+
+    /*
+     * Donut.
+     */
+    .cqstats-page .cqav-donut-layout {
+        grid-template-columns: 1fr !important;
+        gap: 14px;
+    }
+
+    .cqstats-page .cqav-donut {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /*
+     * Bar charts.
+     */
+    .cqstats-page .cqav-bar-row {
+        grid-template-columns:
+            minmax(75px, 100px)
+            minmax(60px, 1fr)
+            46px !important;
+
+        gap: 7px;
+    }
+
+    .cqstats-page .cqav-bar-label {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+    /*
+     * Traffic.
+     */
+    .cqstats-page .cqtraffic-panel {
+        padding: 15px !important;
+    }
+
+    .cqstats-page .cqtraffic-head {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .cqstats-page .cqtraffic-kpis {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 8px;
+    }
+
+    .cqstats-page .cqtraffic-chart {
+        width: 100%;
+        height: 220px !important;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+
+    /*
+     * Stock.
+     */
+    .cqstats-stock-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cqstats-stock-numbers {
+        width: 100%;
+        min-width: 0 !important;
+    }
+
+
+    /*
+     * Forms / controls génériques Perfex.
+     */
+    input.form-control,
+    select.form-control,
+    textarea.form-control {
+        max-width: 100%;
+    }
+
+    .input-group {
+        max-width: 100%;
+    }
+
+
+    /*
+     * DataTables / listes CRM / users / tickets.
+     *
+     * Perfex reste responsable du rendu fonctionnel,
+     * nous garantissons simplement l'absence de
+     * débordement de page.
+     */
+    .dataTables_wrapper,
+    .dataTables_wrapper .row,
+    .dataTables_wrapper [class*="col-"] {
+        max-width: 100%;
+    }
+
+    .dataTables_wrapper .table-responsive {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    /*
+     * Modals mobile.
+     */
+    .modal-dialog {
+        width: calc(100vw - 16px) !important;
+        max-width: calc(100vw - 16px) !important;
+
+        margin: 8px auto !important;
+    }
+
+    .modal-content {
+        max-height: calc(100vh - 16px);
+        overflow-y: auto;
+    }
+
+    .modal-body {
+        overflow-wrap: anywhere;
+    }
+
+}
+
+
+/* ==========================================================
+   PETITS TELEPHONES
+   ========================================================== */
+
+@media (max-width: 430px) {
+
+    /*
+     * KPI : une colonne uniquement sur très petit écran.
+     */
+    .cqstats-kpi-grid,
+    .cqstats-kpi-grid-4 {
+        grid-template-columns: 1fr !important;
+    }
+
+
+    /*
+     * Informations produit.
+     */
+    .cqstats-product-bottom {
+        grid-template-columns: 1fr !important;
+    }
+
+
+    /*
+     * Traffic KPI.
+     */
+    .cqstats-page .cqtraffic-kpis {
+        grid-template-columns: 1fr !important;
+    }
+
+
+    .cqstats-header h1,
+    .coquette-dashboard-header h1 {
+        font-size: 21px !important;
+    }
+
+
+    /*
+     * Header logo plus compact.
+     */
+    #header #logo {
+        max-width: 125px !important;
+    }
+
+    #header .coquette-hub-header-logo,
+    #header #logo img {
+        max-width: 96px !important;
+    }
+
+
+    /*
+     * Tables : toujours scrollables.
+     */
+    .cqstats-table {
+        min-width: 560px;
+    }
+
+}
+
+/* === COQUETTE HUB MOBILE V1 END === */
+
+
+/* === COQUETTE HUB MOBILE V2 START === */
+
+
+/* ==========================================================
+   MOBILE HEADER
+   ========================================================== */
+
+@media (max-width: 767px) {
+
+    /*
+     * Donner davantage de place au branding
+     * entre hamburger et menu utilisateur.
+     */
+    #header #logo {
+        width:auto !important;
+        max-width:none !important;
+        min-width:0 !important;
+
+        flex:
+            1 1 auto !important;
+
+        overflow:hidden;
+    }
+
+    #header #logo a.logo {
+        width:100% !important;
+
+        display:flex !important;
+        align-items:center;
+
+        gap:7px;
+
+        min-width:0;
+        overflow:hidden;
+    }
+
+    /*
+     * Logo compact.
+     */
+    #header .coquette-hub-header-logo,
+    #header #logo img {
+        width:auto !important;
+        height:auto !important;
+
+        max-width:38px !important;
+        max-height:36px !important;
+
+        flex:
+            0 0 auto;
+    }
+
+    /*
+     * Nom HUB : empêcher la coupure brutale
+     * constatée sur mobile.
+     */
+    #header .coquette-hub-brand-title {
+        display:block;
+
+        min-width:0;
+        max-width:none !important;
+
+        flex:
+            0 1 auto;
+
+        font-size:11px !important;
+        line-height:1.2;
+
+        font-weight:800;
+
+        letter-spacing:.15px;
+
+        white-space:nowrap;
+
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
+
+    /*
+     * Zone droite du header toujours accessible.
+     */
+    #header .navbar-right {
+        flex:
+            0 0 auto;
+    }
+
+
+    /* ======================================================
+       STATISTICS - ESPACEMENT MOBILE
+       ====================================================== */
+
+    .cqstats-page {
+        padding-bottom:18px;
+    }
+
+    .cqstats-header {
+        margin-bottom:18px;
+    }
+
+    .cqstats-header h1 {
+        margin-bottom:7px;
+    }
+
+    .cqstats-header p {
+        margin-bottom:0;
+    }
+
+    .cqstats-section-title {
+        margin-top:18px;
+        margin-bottom:13px;
+    }
+
+
+    /* ======================================================
+       TABS MOBILE
+       ====================================================== */
+
+    .cqstats-tabs {
+        gap:3px;
+
+        scrollbar-width:none;
+
+        scroll-snap-type:
+            x proximity;
+    }
+
+    .cqstats-tabs::-webkit-scrollbar {
+        display:none;
+    }
+
+    .cqstats-tabs a {
+        min-height:44px;
+
+        display:flex;
+        align-items:center;
+
+        scroll-snap-align:start;
+
+        padding:
+            10px 13px !important;
+    }
+
+
+    /* ======================================================
+       KPI - PLUS COMPACT
+       ====================================================== */
+
+    .cqstats-kpi {
+        padding:
+            13px 14px !important;
+
+        min-height:92px;
+
+        display:flex;
+        flex-direction:column;
+
+        justify-content:center;
+    }
+
+    .cqstats-kpi span {
+        margin-bottom:5px;
+    }
+
+    .cqstats-kpi strong {
+        margin:0;
+
+        font-size:21px !important;
+    }
+
+
+    /* ======================================================
+       CARDS / PANELS
+       ====================================================== */
+
+    .cqstats-panel,
+    .cqstats-table-panel {
+        border-radius:14px !important;
+    }
+
+    .cqstats-panel {
+        margin-bottom:13px;
+    }
+
+}
+
+
+/* ==========================================================
+   TELEPHONES 351 -> 430
+   ========================================================== */
+
+@media (min-width:351px) and (max-width:430px) {
+
+    /*
+     * Sur 390px, deux KPI par ligne sont parfaitement
+     * exploitables et évitent une page extrêmement longue.
+     */
+
+    .cqstats-kpi-grid,
+    .cqstats-kpi-grid-4 {
+        grid-template-columns:
+            repeat(2,minmax(0,1fr)) !important;
+
+        gap:9px !important;
+    }
+
+    .cqstats-kpi {
+        padding:
+            12px !important;
+
+        min-height:90px;
+    }
+
+    .cqstats-kpi span {
+        font-size:10px !important;
+
+        line-height:1.3;
+    }
+
+    .cqstats-kpi strong {
+        font-size:19px !important;
+    }
+
+    .cqstats-kpi small {
+        font-size:9px !important;
+    }
+
+
+    /*
+     * Traffic KPIs également en 2 colonnes.
+     */
+    .cqstats-page .cqtraffic-kpis {
+        grid-template-columns:
+            repeat(2,minmax(0,1fr)) !important;
+    }
+
+
+    /*
+     * Informations produit.
+     */
+    .cqstats-product-bottom {
+        grid-template-columns:
+            repeat(2,minmax(0,1fr)) !important;
+    }
+
+}
+
+
+/* ==========================================================
+   TRES PETITS TELEPHONES
+   ========================================================== */
+
+@media (max-width:350px) {
+
+    .cqstats-kpi-grid,
+    .cqstats-kpi-grid-4,
+    .cqstats-page .cqtraffic-kpis,
+    .cqstats-product-bottom {
+        grid-template-columns:
+            1fr !important;
+    }
+
+    #header .coquette-hub-brand-title {
+        font-size:10px !important;
+    }
+
+    #header .coquette-hub-header-logo,
+    #header #logo img {
+        max-width:32px !important;
+        max-height:31px !important;
+    }
+
+}
+
+
+/* === COQUETTE HUB MOBILE V2 END === */
+
+
+
+/*
+========================================================
+COQUETTE_HUB_FIXED_SIDEBAR_V1
+
+Desktop:
+Sidebar always remains visible while the main
+content scrolls.
+
+Mobile behavior is left unchanged.
+========================================================
+*/
+
+@media (min-width: 768px) {
+
+    body.coquette-hub-ui #menu.sidebar {
+
+        position: fixed !important;
+
+        top: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+
+        height: 100vh !important;
+        max-height: 100vh !important;
+
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+
+        overscroll-behavior: contain;
+
+        z-index: 1001;
+    }
+
+
+    /*
+     * Modern discreet scrollbar.
+     */
+
+    body.coquette-hub-ui
+    #menu.sidebar::-webkit-scrollbar {
+
+        width: 5px;
+    }
+
+
+    body.coquette-hub-ui
+    #menu.sidebar::-webkit-scrollbar-thumb {
+
+        background: #e4e4e7;
+
+        border-radius: 20px;
+    }
+
+
+    body.coquette-hub-ui
+    #menu.sidebar::-webkit-scrollbar-track {
+
+        background: transparent;
+    }
+
+}
+
+
+
+/*
+========================================================
+COQUETTE_HUB_LANGUAGE_SWITCH_FR_EN_V1
+========================================================
+*/
+
+#header
+.coquette-hub-language-switch {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+
+    height: 100%;
+
+    margin-right: 10px;
+
+    padding: 0 7px;
+
+    list-style: none;
+}
+
+
+#header
+.coquette-hub-language-switch
+.coquette-hub-lang-btn {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 30px;
+    height: 28px;
+
+    padding: 0 7px;
+
+    border-radius: 7px;
+
+    color: #71717a;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    text-decoration: none !important;
+
+    transition:
+        background .15s ease,
+        color .15s ease;
+}
+
+
+#header
+.coquette-hub-language-switch
+.coquette-hub-lang-btn:hover {
+
+    background: #fff1f6;
+
+    color: #e91e63;
+}
+
+
+#header
+.coquette-hub-language-switch
+.coquette-hub-lang-btn.active {
+
+    background: #fff1f6;
+
+    color: #e91e63;
+
+    box-shadow:
+        inset 0 0 0 1px
+        rgba(233, 30, 99, .16);
+}
+
+
+#header
+.coquette-hub-lang-separator {
+
+    color: #d4d4d8;
+
+    font-size: 11px;
+}
+
+
+@media (max-width: 768px) {
+
+    #header
+    .coquette-hub-language-switch {
+
+        margin-right: 3px;
+
+        padding: 0 2px;
+
+        gap: 1px;
+    }
+
+
+    #header
+    .coquette-hub-language-switch
+    .coquette-hub-lang-btn {
+
+        min-width: 27px;
+
+        padding: 0 4px;
+
+        font-size: 10px;
+    }
+
+}
+
+
+
+/*
+========================================================
+COQUETTE_HUB_REMOVE_HEADER_WORD_V1
+Hide the custom HUB word from the Perfex top header.
+========================================================
+*/
+
+#header .coquette-hub-brand-title {
+    display: none !important;
+}
+
